@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no " />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Delete</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" />
+          <link href="{{ url_for('static', filename='vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="/static/css/styles.css" rel="stylesheet" />
+<!--        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">-->
+
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container px-5">
+                <a class="navbar-brand cursive" href="#!">Cafes ☕︎</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="{{url_for('home')}}">Home</a></li>
+<!--                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>-->
+                        <li class="nav-item"><a class="nav-link" href={{url_for('add_cafe')}}">New Cafe</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#!"><form action="{{url_for('search')}}" method="POST"  class="d-flex flex-wrap ">
+    <input name="search" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button></form></a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+<!--Page Content-->
+
+
+         <div class="container justify-content-center"><br>
+            <h1 class="text-center">Delete cafe</h1><br>
+            <form action="{{url_for('delete',id=id)}}" method="POST"  class="d-flex flex-wrap ">
+                <label for="new_price">Enter the API Key</label>&nbsp;
+                <input name="delete" class="form-control me-2"  >
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Submit</button>
+            </form>
+
+        </div>
+
+
+
+<!--Footer Content        -->
+
+
+           <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <ul class="list-inline text-center">
+            <li class="list-inline-item">
+              <a href="https://linkedin.com/in/rekha-s-41788b128/" target="_blank" title="linkedin Rekha's profile" rel="noopener noreferrer">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x" style="color:#8a6626" ></i>
+                  <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+
+            <li class="list-inline-item">
+              <a href="https://github.com/Rekhz" target="_blank" title="Github Rekha's profile" rel="noopener noreferrer">
+                <span class="fa-stack fa-lg">
+                  <i class="fas fa-circle fa-stack-2x" style="color:#8a6626"></i>
+                  <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
+          </ul>
+
+<p class="m-0 text-center text-white ">Copyright &copy; Rekha 2023</p>
+<p class="m-0 text-center text-grey smallfont">Image used is from Unsplash(<a href="image by https://unsplash.com/@asthetik" >@asthetik </a>)</p>        </div>
+      </div>
+    </div>
+  </footer>
+
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/static/js/scripts.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>-->
+    </body>
+</html>
